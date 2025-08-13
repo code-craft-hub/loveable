@@ -1,4 +1,5 @@
 "use client"
+import { ModeToggle } from "@/components/toggle-mode";
 import prisma from "@/lib/db";
 import { useTRPC } from "@/trpc/client";
 import { useQuery } from "@tanstack/react-query";
@@ -16,6 +17,7 @@ const Home =  () => {
     <div>
       <h1>Home</h1>
       {JSON.stringify(data, null, 2)}
+      <ModeToggle />
     </div>
   );
 };
